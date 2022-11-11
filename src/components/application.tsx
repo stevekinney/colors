@@ -1,12 +1,12 @@
-import { useReducer } from 'react';
+import { useContext } from 'react';
 import SavedColors from './saved-colors';
 import RelatedColors from './related-colors';
 import AdjustColors from './adjust-colors';
 import ColorPicker from './color-picker';
-import colorReducer, { initialState } from '../lib/color-reducer';
+import { ColorContext } from '../context';
 
 const Application = () => {
-  const [state, dispatch] = useReducer(colorReducer, initialState);
+  const { state, dispatch } = useContext(ColorContext);
   const hexColor = state.hexColor;
 
   return (
