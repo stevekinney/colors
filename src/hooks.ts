@@ -1,13 +1,13 @@
-import { useCallback, useContext, useMemo } from 'react';
-import { ColorContext } from './context';
+import { useCallback, useMemo } from 'react';
+import { useColorContext } from './context';
 
 export const useDispatch = () => {
-  const { dispatch } = useContext(ColorContext);
+  const { dispatch } = useColorContext();
   return useMemo(() => dispatch, [dispatch]);
 };
 
 export const useHexColor = () => {
-  const { state } = useContext(ColorContext);
+  const { state } = useColorContext();
   return useMemo(() => state.hexColor, [state]);
 };
 
