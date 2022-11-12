@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import Application from './components/application';
 
 import { makeServer } from './api';
+import { ColorProvider } from './context';
 
 import './index.css';
-import { ColorProvider } from './context';
 
 const environment = process.env.NODE_ENV;
 makeServer({ environment });
