@@ -3,11 +3,11 @@ import SavedColors from './saved-colors';
 import RelatedColors from './related-colors';
 import AdjustColors from './adjust-colors';
 import ColorPicker from './color-picker';
-import { ColorContext } from '../context';
+import { useDispatch, useHexColor } from '../hooks';
 
 const Application = () => {
-  const { state, dispatch } = useContext(ColorContext);
-  const hexColor = state.hexColor;
+  const hexColor = useHexColor();
+  const dispatch = useDispatch();
 
   return (
     <div className="grid max-w-3xl grid-cols-1 gap-8 p-8 pb-40 mx-auto dark:bg-slate-900 dark:text-white sm:grid-cols-2">
