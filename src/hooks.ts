@@ -19,3 +19,35 @@ export const useUpdateHexCode = () => {
     [dispatch],
   );
 };
+
+export const useUpdateRGB = () => {
+  const dispatch = useDispatch();
+  return useCallback(
+    (rgb: RGB) => dispatch({ type: 'update-rgb-color', payload: { rgb } }),
+    [dispatch],
+  );
+};
+
+export const useUpdateHSL = () => {
+  const dispatch = useDispatch();
+  return useCallback(
+    (hsl: HSL) => dispatch({ type: 'update-hsl-color', payload: { hsl } }),
+    [dispatch],
+  );
+};
+
+export const useUpdateHSV = () => {
+  const dispatch = useDispatch();
+  return useCallback(
+    (hsv: HSV) => dispatch({ type: 'update-hsv-color', payload: { hsv } }),
+    [dispatch],
+  );
+};
+
+export const useUpdateCMYK = () => {
+  const dispatch = useDispatch();
+  return useCallback(
+    (cmyk: CMYK) => dispatch({ type: 'update-cmyk-color', payload: { cmyk } }),
+    [dispatch],
+  );
+};
