@@ -1,6 +1,5 @@
 import clsx from 'clsx';
-import { MouseEventHandler, useContext } from 'react';
-import { ColorContext } from '../../context';
+import { MouseEventHandler } from 'react';
 import { useDispatch } from '../../hooks';
 import Button from './button';
 

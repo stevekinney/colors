@@ -1,4 +1,4 @@
-import { Dispatch } from 'react';
+import React, { Dispatch } from 'react';
 import ColorName from './color-name';
 import HexToCMYK from './to-cmyk';
 import HexToHSL from './to-hsl';
