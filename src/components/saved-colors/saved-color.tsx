@@ -14,7 +14,7 @@ const SavedColor = ({ name, hexColor, onClick, onRemove }: SavedColorProps) => {
     <article className="flex items-center gap-2 place-content-between">
       <ColorChangeSwatch hexColor={hexColor} onClick={onClick} />
       <h3 className="text-sm whitespace-nowrap">{name}</h3>
-      <Button variant="destructive" size="small" onClick={onRemove}>
+      <Button size="small" onClick={onRemove}>
         Remove
       </Button>
     </article>
